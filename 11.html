@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 11 Memories</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior:smooth;
+}
+
+/* BODY */
+body{
+    font-family:'Poppins', sans-serif;
+
+    background: linear-gradient(-45deg,#6a11cb,#2575fc,#00c6ff,#7b2ff7);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+
+    color:white;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.1);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    opacity:.6;
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.title h1{
+    font-size:40px;
+}
+
+/* MEMORIES SECTION */
+.memories{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* MEMORY CARD */
+.memory-card{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin:60px 0;
+    padding:30px;
+    border-radius:20px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.25);
+    transition:.4s ease;
+}
+
+.memory-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* IMAGE */
+.memory-img{
+    width:320px;
+    height:220px;
+    border-radius:15px;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.memory-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* TEXT */
+.memory-text{
+    flex:1;
+}
+
+.memory-text h2{
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.memory-text p{
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* ALTERNATE */
+.right{
+    flex-direction:row-reverse;
+}
+
+/* BUTTON */
+.btn{
+    display:block;
+    width:160px;
+    margin:60px auto;
+    padding:12px;
+    text-align:center;
+
+    border-radius:30px;
+    background:white;
+    color:#2575fc;
+
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.memory-card,
+.right{
+    flex-direction:column;
+    text-align:center;
+}
+
+.memory-img{
+    width:100%;
+    height:220px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">SHS Journey</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="11.html">Grade 11 Moments</a></li>
+<li><a href="12.html">Grade 12 Moments</a></li>
+</ul>
+</nav>
+
+<div class="title">
+<h1>Grade 11 Moments</h1>
+<p>My SHS Journey Moments</p>
+</div>
+
+<div class="memories" id="memories">
+
+<!-- ⭐ MEMORY 1 -->
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/VAkqNil.jpeg">
+</div>
+<div class="memory-text">
+<h2>The First Group Picture of the Best</h2>
+<p>
+This was probably the first group photo of our section during Nutrition Month in the first week of Grade 11. At that time, we were still getting to know each other, so the smiles in the picture carried a hint of awkwardness. We had just started building connections, unsure of how the year would unfold, but there was a quiet sense of excitement. Looking back, it remains a simple yet meaningful memory filled with laughter, new friendships, and the peaceful beginning of a journey we would share together.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 2 -->
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/Z1wHi4r.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Rising</h2>
+<p>
+During the Buwan ng Wika, my friend Kenneth Santos and I joined the slogan making contest in our school. Unexpectedly, I won second place while he placed third. I honestly did not expect to achieve this because I used to doubt my abilities when it came to activities like this. I was not very confident in expressing my ideas through slogans, but this experience became meaningful for me. It proved that sometimes, stepping out of my comfort zone can lead to surprising and rewarding moments. More than the recognition, it was a fun and memorable experience shared with a friend.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 3 -->
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/pHN24lD.jpeg">
+</div>
+<div class="memory-text">
+<h2>CHAMPIONS!</h2>
+<p>
+This was the PEAK MOMENT of our Buwan ng Wika celebration. After putting in a lot of effort and spending countless hours practicing for our sabayang pagbigkas presentation, we finally became champions. Hearing our name announced as the winner felt surreal because all the hard work, nervousness, and preparation had paid off. The moment was filled with pride, joy, and excitement as we claimed our victory together. It became one of the most unforgettable achievements we shared as a group.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 4 -->
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/n0FfJ14.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Group Expansion</h2>
+<p>
+This was the moment I started to socialize more and slowly overcome my shyness. During this time, I had the chance to meet new people in our school and eventually build friendships with them.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 5 -->
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/b2OCUdn.jpeg">
+</div>
+<div class="memory-text">
+<h2>My First Cinema with Friends</h2>
+<p>
+This was one of the most memorable moments for me during Grade 11 because it was my first time watching a movie in the cinema with friends.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 6 -->
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/DBwJkFw.jpeg">
+</div>
+<div class="memory-text">
+<h2>The FUN RUN</h2>
+<p>
+This happened during the celebration of Academia de Pulilan's foundation day. This was my very first fun run.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 7 -->
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/WXz22D2.jpeg">
+</div>
+<div class="memory-text">
+<h2>The First Year-End</h2>
+<p>
+This picture was taken during our year end party celebration. It represents the friendships I built.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 8 -->
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/xTqGB6q.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Elegant Night</h2>
+<p>
+This picture was taken during my first Senior’s Night, one of the most memorable events of my senior high school journey.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 9 -->
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/E2cPIno.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Final Defense I</h2>
+<p>
+This became a very memorable moment for me because I cannot forget how much effort and preparation we put into this defense.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 10 -->
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/2LNY78c.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Last Group Picture of the 11 STEM BEST</h2>
+<p>
+After all the hard work and challenges we overcame, we celebrated our achievement with one final group picture after the recognition.
+</p>
+</div>
+</div>
+
+</div>
+
+<a href="index.html" class="btn">Back to Home</a>
+
+</body>
+</html>

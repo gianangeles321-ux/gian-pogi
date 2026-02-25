@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 12 Moments</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.1);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#e6d09b;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+}
+
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior:smooth;
+}
+
+/* MOBILE NAV */
+@media(max-width:768px){
+nav{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+}
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY — Scroll Gradient */
+body{
+    font-family:'Poppins', sans-serif;
+
+    background: linear-gradient(
+        to bottom,
+        #4da3ff 0%,
+        #2f7fd8 35%,
+        #1e4f9b 70%,
+        #c9a86a 100%
+    );
+
+    background-repeat:no-repeat;
+    background-size:100% 200%;
+    background-attachment: fixed;
+
+    color:white;
+    min-height:100vh;
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.title h1{
+    font-size:42px;
+    color:#e6d09b;
+}
+
+/* MEMORIES SECTION */
+.memories{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* MEMORY CARD */
+.memory-card{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    margin:60px 0;
+    padding:30px;
+    border-radius:20px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.25);
+    transition:.4s ease;
+}
+
+/* CARD HOVER */
+.memory-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 0 15px rgba(201,168,106,0.4),
+    0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* IMAGE */
+.memory-img{
+    width:320px;
+    height:220px;
+    border-radius:15px;
+    overflow:hidden;
+    flex-shrink:0;
+}
+
+.memory-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* TEXT */
+.memory-text{
+    flex:1;
+}
+
+.memory-text h2{
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.memory-text p{
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* ALTERNATE */
+.right{
+    flex-direction:row-reverse;
+}
+
+/* BUTTON */
+.btn{
+    display:block;
+    width:170px;
+    margin:60px auto;
+    padding:12px;
+    text-align:center;
+    border-radius:30px;
+
+    background: linear-gradient(135deg,#ffffff,#e6d09b);
+    color:#0f4c81;
+
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+.memory-card,
+.right{
+    flex-direction:column;
+    text-align:center;
+}
+
+.memory-img{
+    width:100%;
+    height:220px;
+}
+
+}
+/* TO BE CONTINUED SECTION */
+.continue-section{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.continue-box{
+    display:inline-block;
+    padding:40px 60px;
+    border-radius:20px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.25);
+
+    font-size:28px;
+    font-weight:700;
+    color:#e6d09b;
+
+    transition:.4s ease;
+}
+
+.continue-box:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 0 20px rgba(201,168,106,0.5),
+    0 20px 40px rgba(0,0,0,0.35);
+}
+</style>
+</head>
+
+<body>
+<nav>
+<div class="logo">SHS Journey</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="11.html">Grade 11 Moments</a></li>
+<li><a href="12.html">Grade 12 Moments</a></li>
+</ul>
+</nav>
+
+<div class="title">
+<h1>Grade 12 Moments</h1>
+<p>The Final Chapter of My SHS Journey</p>
+</div>
+
+<div class="memories" id="memories">
+
+<!-- MEMORY 1 -->
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/G5NHbEj.jpeg">
+</div>
+<div class="memory-text">
+<h2>The New Page</h2>
+<p>
+As the new school year started, a new chapter awaited the STEM BEST. It was a fresh beginning filled with new challenges, opportunities, and memories to create together. In this school year, we met our new adviser, Razen Sison, who guided us as we continued our journey. This moment marked the start of another phase of learning, growth, and stronger bonds as a section.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 2 -->
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/DQzlPOc.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Nutrition Redemption</h2>
+<p>
+In this picture, unlike our first Nutrition Month celebration, we came better prepared and more confident this time. Our effort and teamwork paid off as we won 2nd place in the food presentation contest among all sections. We also secured 2nd place in the jingle making contest. Beyond the awards, this experience became more meaningful because it brought us closer together as a group, strengthening our bond and friendship compared to before.
+</p>
+</div>
+</div>
+
+<!-- MEMORY 3 -->
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/gAGTVZO.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Elegant Night II</h2>
+<p>
+This was the group photo of STEM BEST during the Senior’s Night for the new school year at Academia de Pulilan. Unlike the previous year, this acquaintance party was held earlier, but it felt even more fun and lively for me. I cannot forget how energetic I felt when the DJ opened the dance floor for everyone. It was a night filled with music, dancing, and the joy of celebrating with friends and classmates.
+
+</p>
+</div>
+</div>
+
+<!-- MEMORY 4 -->
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/X8KZXZv.jpeg">
+</div>
+<div class="memory-text">
+<h2>Making HISTORY</h2>
+<p>
+In this picture, we achieved something unforgettable by becoming BACK TO BACK CHAMPIONS. After winning the sabayang pagbigkas competition in Grade 11, we once again proved ourselves by winning the folk dance competition for the Grade 12 students. This became the most surprising plot twist of the 2025 celebration of Buwan ng Wika, as it exceeded all of our expectations and turned our hard work into a historic achievement.
+
+</p>
+</div>
+</div>
+
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/nJN6LnW.jpeg">
+</div>
+<div class="memory-text">
+<h2>Locked In!</h2>
+<p>
+This photo, taken by Althea Corchel, captured our focused and determined spirits as we worked on our entrepreneurship business development. In this moment, we were preparing for our product presentation, carefully planning and reviewing every detail. It reflected our dedication, teamwork, and seriousness in making sure our ideas were ready to be shared.
+</p>
+</div>
+</div>
+
+
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/OtP0Ddc.jpeg">
+</div>
+<div class="memory-text">
+<h2>The FUN RUN II</h2>
+<p>
+The fun continued as we joined the run during the 2025 foundation day celebration of Academia de Pulilan. Unlike the first fun run, this time we received commemorative sando shirts as souvenirs to remember the event. It was another lively and colorful experience for me filled with energy, laughter, and the joy of celebrating together.
+</p>
+</div>
+</div>
+
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/0NRPYh2.jpeg">
+</div>
+<div class="memory-text">
+<h2>D-day of Entrep</h2>
+<p>
+In this picture, after proposing our product, ZubiRolls to the panelists, our team, MiNiku Nori, finally faced the business simulation day. This moment was iconic for us because we proudly presented what we believed was the most sustainable business idea, reflecting our creativity, preparation, and commitment to responsible entrepreneurship.
+</p>
+</div>
+</div>
+
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/eURBTZM.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Unforgettable Retreat</h2>
+<p>
+This was the group photo of STEM BEST before leaving Puntabelle Resort. During this retreat, I experienced personal growth through more socialization and learning the value of perseverance. After going through challenging activities, we became closer as a section and strengthened the friendship and trust we had with one another. The retreat became a meaningful memory that reminded me to keep going even when things were difficult.
+
+</p>
+</div>
+</div>
+
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/z7dlv4A.jpeg">
+</div>
+<div class="memory-text">
+<h2>The Second Year-end</h2>
+<p>
+This was the friend group I became close with before the year 2025 ended. This photo was taken during the year end party celebration together with Razen Sison. We spent the event playing games and enjoying each other’s company. I remember laughing at how I looked while playing one of the games, but it did not matter because the experience was truly fun. Meeting and bonding with new friends before the year ended made the celebration more meaningful and memorable for me.
+</p>
+</div>
+</div>
+
+<div class="memory-card right">
+<div class="memory-img">
+<img src="https://i.imgur.com/zax9npW.jpeg">
+</div>
+<div class="memory-text">
+<h2>The FINAL Defense</h2>
+<p>
+As our research capstone project was completed and our product was successfully defended, we could hardly contain our joy and relief. This photo shows our section after overcoming one of the biggest academic challenges of the year, together with our adviser, Razen Sison. The final defense marked the culmination of our hard work, patience, and teamwork as we reached another important milestone in our journey.
+
+</p>
+</div>
+</div>
+
+<div class="memory-card">
+<div class="memory-img">
+<img src="https://i.imgur.com/30FgIEo.jpeg">
+</div>
+<div class="memory-text">
+<h2>Final Swim with Sir Aris</h2>
+<p>
+After the capstone project defense, we continued our swimming lesson with Sir Aris. Thanks to his guidance, I was able to learn how to swim properly and gain more confidence in the water. This activity also served as the conclusion of our final performance for the Physical Education subject, marking the end of another learning experience filled with improvement and personal achievement.
+
+
+
+</p>
+</div>
+</div>
+<!-- TO BE CONTINUED -->
+<div class="continue-section">
+<div class="continue-box">
+✨ To Be Continued ✨
+<br>
+<p style="font-size:18px;margin-top:15px;color:white;font-weight:400;">
+Graduation Arc?
+</p>
+</div>
+</div>
+</div>
+
+<a href="index.html" class="btn">Back to Home</a>
+
+<script>
+window.addEventListener("scroll", function(){
+
+    let scrollPercent =
+        window.scrollY /
+        (document.body.scrollHeight - window.innerHeight);
+
+    document.body.style.backgroundPosition =
+        "0% " + (scrollPercent * 100) + "%";
+
+});
+</script>
+
+</body>
+</html>

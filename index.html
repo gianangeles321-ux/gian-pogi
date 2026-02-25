@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The SHS Journey of Gian Carlo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    background: linear-gradient(-45deg,#6a11cb,#2575fc,#00c6ff,#7b2ff7);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color:white;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.1);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    opacity:.7;
+}
+
+/* HERO */
+.hero{
+    position:relative;
+    text-align:center;
+    padding:140px 20px 100px;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("https://i.imgur.com/fxggHp1.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* HERO OVERLAY */
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+}
+
+.hero h1,
+.typing{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:3rem;
+    font-weight:700;
+    text-shadow:0 4px 20px rgba(0,0,0,0.6);
+}
+/* IMPROVED TYPING EFFECT */
+.typing{
+    font-size:1.3rem;
+    margin-top:15px;
+    border-right:3px solid white;
+    white-space:nowrap;
+    overflow:hidden;
+    display:inline-block;
+
+    animation:
+        typing 4s steps(30, end) 1s forwards,
+        blink 0.8s infinite;
+}
+
+/* Auto width animation based on text */
+@keyframes typing{
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink{
+    50% { border-color: transparent }
+}
+
+/* SECTIONS */
+.section{
+    padding:80px 10%;
+    text-align:center;
+}
+
+/* CARDS */
+.cards-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:280px;
+    padding:35px 25px;
+    border-radius:20px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+
+    transition:.4s ease;
+    animation: floatUp 6s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0px);}
+}
+
+.card:hover{
+    transform:translateY(-15px) scale(1.05);
+    box-shadow:
+    0 0 20px rgba(255,255,255,0.25),
+    0 15px 40px rgba(0,0,0,0.35);
+}
+/* FLOATING GALLERY BUTTON - LEFT SIDE */
+.floating-gallery{
+    position:fixed;
+    bottom:30px;
+    left:30px;   /* changed from right to left */
+    padding:14px 22px;
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#4da6ff,#1e3c72,#caa74e);
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1rem;
+
+    backdrop-filter:blur(10px);
+    box-shadow:
+        0 0 15px rgba(77,166,255,0.6),
+        0 0 25px rgba(202,167,78,0.4);
+
+    transition:0.4s ease;
+    z-index:999;
+}
+
+.floating-gallery:hover{
+    transform:translateY(-8px) scale(1.05);
+    box-shadow:
+        0 0 25px rgba(77,166,255,0.9),
+        0 0 40px rgba(202,167,78,0.7);
+}
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 22px;
+    border-radius:30px;
+    background:white;
+    color:#2575fc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    opacity:.8;
+}
+
+/* BACK TO TOP */
+.top-btn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    padding:12px 16px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    color:#2575fc;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.hero{
+    padding:100px 20px 70px;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+.nav-links{
+    gap:15px;
+    font-size:14px;
+}
+
+.cards-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.card{
+    width:90%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">SHS Journey</div>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="11.html">Grade 11 Moments</a></li>
+<li><a href="12.html">Grade 12 Moments</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<h1>The SHS Journey of Gian Carlo Angeles</h1>
+<div class="typing">Empowerment Technology Project</div>
+</section>
+
+<section class="section" id="about">
+<h2>About Me</h2>
+<br>
+<div class="cards-container">
+<div class="card">
+<p>This section contains information about me and my handsome background.</p>
+<a class="btn" href="about.html">Learn More</a>
+</div>
+</div>
+</section>
+
+<section class="section" id="grade11">
+<h2>Grade 11 Moments</h2>
+<br>
+<div class="cards-container">
+<div class="card">
+<p>Memories and learning experiences during Grade 11 journey.</p>
+<a class="btn" href="11.html">Explore</a>
+</div>
+</div>
+</section>
+
+<section class="section" id="grade12">
+<h2>Grade 12 Moments</h2>
+<br>
+<div class="cards-container">
+<div class="card">
+<p>Achievements and experiences during Grade 12.</p>
+<a class="btn" href="12.html">Explore</a>
+</div>
+</div>
+</section>
+<!-- FLOATING GALLERY BUTTON -->
+<a href="gallery.html" class="floating-gallery">
+    📸 Gallery
+</a>
+<footer>
+© 2026 The SHS Journey of Gian Carlo
+</footer>
+
+<button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+</body>
+</html>

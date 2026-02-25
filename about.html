@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+/* BODY */
+body{
+    font-family:'Poppins', sans-serif;
+
+    background: linear-gradient(-45deg,#6a11cb,#2575fc,#00c6ff,#7b2ff7);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+
+    color:white;
+    min-height:100vh;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 10%;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.1);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#e6d09b;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    opacity:.6;
+}
+
+/* CONTAINER */
+.container{
+    padding:80px 10%;
+    display:flex;
+    justify-content:center;
+}
+
+/* GLASS CARD */
+.card{
+    max-width:650px;
+    width:100%;
+
+    padding:45px;
+    border-radius:20px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.25);
+
+    text-align:center;
+}
+
+/* PORTRAIT IMAGE */
+.profile-img{
+    width:260px;
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+    border:4px solid rgba(255,255,255,0.8);
+
+    margin:0 auto 30px;
+    display:block;
+
+    transition:.4s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
+}
+
+/* TEXT STYLE */
+.card h2{
+    font-size:28px;
+    margin-top:25px;
+}
+
+.card p{
+    font-size:18px;
+    line-height:1.7;
+    margin-top:18px;
+}
+
+/* LIST */
+.card ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+.card ul li{
+    font-size:18px;
+    margin:10px 0;
+}
+
+/* SONG BOX */
+.song-box{
+    margin-top:30px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+}
+
+/* SONG ICON */
+.song-icon{
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+    background: rgba(255,255,255,0.2);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+.song-icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+
+    margin-top:35px;
+    padding:14px 28px;
+
+    border-radius:30px;
+    background:white;
+
+    color:#2575fc;
+
+    text-decoration:none;
+    font-weight:bold;
+
+    transition:.3s;
+    font-size:17px;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.profile-img{
+    width:200px;
+    height:200px;
+    border-radius:18px;
+}
+
+.card{
+    padding:30px;
+}
+
+.card h2{
+    font-size:24px;
+}
+
+.card p,
+.card ul li{
+    font-size:16px;
+}
+
+nav{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+}
+/* FLOATING SONG CARD */
+.song-box{
+    margin-top:30px;
+    padding:25px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+
+    border-radius:20px;
+
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.25);
+
+    box-shadow:0 8px 30px rgba(0,0,0,0.2);
+
+    transition:0.4s ease;
+    animation: floatSong 4s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatSong{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
+}
+
+/* SOFT GLOW HOVER */
+.song-box:hover{
+    box-shadow:
+    0 0 20px rgba(255,255,255,0.4),
+    0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* SONG ICON */
+.song-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+    overflow:hidden;
+
+    backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.35);
+}
+
+.song-icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* SONG TEXT */
+.song-box p{
+    font-size:18px;
+    line-height:1.7;
+    text-align:center;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.song-box{
+    padding:20px;
+}
+
+.song-box p{
+    font-size:16px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="logo">SHS Journey</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="11.html">Grade 11 Moments</a></li>
+<li><a href="12.html">Grade 12 Moments</a></li>
+</ul>
+</nav>
+
+<!-- CONTENT -->
+<div class="container" id="about me">
+
+<div class="card">
+
+<img src="https://i.imgur.com/Erpovb8.jpeg" class="profile-img" alt="Portrait">
+
+<h2>About Me</h2>
+
+<p>
+Hi! I am Gian Carlo S. Angeles, a Grade 12 STEM B student at Academia de Pulilan. I enjoy creating meaningful and fun memories with my friends while growing both academically and personally. This website serves as a collection of my Senior High School journey, highlighting my experiences, achievements, and unforgettable moments throughout my SHS life.
+</p>
+
+<h2>My Hobbies</h2>
+
+<ul>
+<li>I watch anime during free time</li>
+<li>I also read Manga/Comics</li>
+<li>I play online games</li>
+</ul>
+<!-- SONG SECTION -->
+<h2>My Favorite Song</h2>
+
+<div class="song-box">
+
+<div class="song-icon">
+<img src="https://i.imgur.com/OkWu6oX.jpeg" alt="Song Icon">
+</div>
+
+<p>
+Pag-ibig ay Kanibalismo II - fitterkarma
+<br><br>
+I like this song because it reflects a deeper and more realistic view of love. It reminds me that love should not be overwhelming or self-destructive, and that it’s important to keep my own identity while caring for someone. It resonates with my experiences and teaches me that admiration and affection are meaningful when balanced with self-respect and emotional growth.
+</p>
+<!-- MUSIC PLAYER -->
+<audio controls style="margin-top:15px; width:100%;">
+<source src="https://upcdn.io/223k2ZX/raw/SpotiDownloader.com%20-%20Pag-Ibig%20ay%20Kanibalismo%20II%20-%20fitterkarma.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+
+<a class="btn" href="index.html">Back to Home</a>
+
+</div>
+</div>
+
+</body>
+</html>
